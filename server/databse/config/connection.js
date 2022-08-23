@@ -1,14 +1,14 @@
 const { Pool } = require('pg');
 require('dotenv').config();
 
-const { DB_URL_DEVELOPMENT } = process.env;
+const { HEROKU_POSTGRESQL_YELLOW_URL } = process.env;
 
-if (!DB_URL_DEVELOPMENT) {
+if (!HEROKU_POSTGRESQL_YELLOW_URL) {
   throw new Error('GO TO HELL');
 }
 
 const connection = new Pool({
-  connectionString: DB_URL_DEVELOPMENT,
+  connectionString: HEROKU_POSTGRESQL_YELLOW_URL,
   ssl: false,
 });
 
