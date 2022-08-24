@@ -11,7 +11,7 @@ console.log(process.env.NODE_ENV);
 let ssl;
 let DATABASE_URL = '';
 if (process.env.NODE_ENV === 'production') {
-  DATABASE_URL = process.env.DB_PRODUCTION;
+  DATABASE_URL = process.env. DATABASE_URL;
   ssl = {
     rejectUnauthorized: false,
   };
