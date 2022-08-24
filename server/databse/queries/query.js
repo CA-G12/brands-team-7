@@ -1,8 +1,8 @@
 const connection = require('../config/connection');
 
-const getData = () => {
+const getBrands = () => {
   const sql = 'select * from brands;';
   return connection.query(sql);
 };
 
-module.exports = getData;
+module.exports = getBrands;
