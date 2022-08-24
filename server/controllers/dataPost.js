@@ -2,7 +2,6 @@
 const { addProduct } = require('../databse/queries');
 
 const addProductToDataBase = (req, res) => {
-  console.log(req.body);
 
   const {
     name, image, description, price, brandid,

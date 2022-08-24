@@ -150,3 +150,10 @@ p {
   margin: 5px;
 
 }
+.info button{
+  padding: 5px;
+  border-radius: 8px;
+border: none;
+margin-top: 20px;
+background-color: goldenrod;
+}
