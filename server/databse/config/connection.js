@@ -1,6 +1,7 @@
 const { Pool } = require('pg');
 require('dotenv').config();
 
+
 // const { DB_URL_DEVELOPMENT } = process.env;
 
 // if (!DB_URL_DEVELOPMENT) {
@@ -21,6 +22,9 @@ if (process.env.NODE_ENV === 'production') {
   DATABASE_URL = process.env.DB_TESTING;
   ssl = false;
 } else {
+const { HEROKU_POSTGRESQL_YELLOW_URL } = process.env;
+
+if (!HEROKU_POSTGRESQL_YELLOW_URL) {
   throw new Error('GO TO HELL');
 }
 
