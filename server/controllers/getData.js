@@ -1,8 +1,8 @@
-const { getData } = require('../databse/queries');
+const { getBrands } = require('../databse/queries');
 
-const recieveData = (req, res) => {
-  getData()
+const recieveBrands = (req, res) => {
+  getBrands()
     .then((data) => res.json(data.rows))
     .catch(() => res.send('JUST DIE'));
 };
-module.exports = recieveData;
+module.exports = recieveBrands;

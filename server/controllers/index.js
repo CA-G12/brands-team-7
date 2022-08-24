@@ -1,4 +1,4 @@
-const recieveData = require('./getData');
+const recieveBrands = require('./getData');
 const dataPost = require('./dataPost');
 
-module.exports = { recieveData, dataPost };
+module.exports = { recieveBrands, dataPost };
