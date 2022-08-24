@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;0,700;1,400;1,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background-color: rgb(221, 213, 218);
+  position: relative;
+  min-height: 100vh;
+}
+
+
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+header h2 {
+  font-size: 40px;
+  color: goldenrod;
+}
+
+header button {
+  position: fixed;
+  right: 50px;
+  font-size: 30px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  bottom: 50px;
+  border: none;
+  background: goldenrod;
+  color: black;
+}
+
+.form {
+  position: absolute;
+  top: 200px;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%);
+  background: goldenrod;
+  border-radius: 12px;
+  border: 2px solid rgb(129, 126, 126);
+  display: none;
+  z-index: 5;
+
+}
+
+form {
+  background-color: rgb(219, 206, 214);
+  padding: 10px;
+  width: 300px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+form h3 {
+  text-align: center;
+  font-size: 25px;
+}
+
+form select {
+  width: 100%;
+  padding: 10px;
+}
+
+form button {
+  margin: 10px auto;
+  width: 100px;
+  padding: 10px;
+  background: #000;
+  color: gold;
+  border: none;
+  border-radius: 8px;
+}
+
+.countiner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.countiner .product {
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+
+  text-align: center;
+  border-radius: 12px;
+  position: relative;
+}
+
+.countiner .product img {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://media.istockphoto.com/vectors/default-image-icon-vector-missing-picture-page-for-website-design-or-vector-id1357365823?k=20&m=1357365823&s=612x612&w=0&h=ZH0MQpeUoSHM3G2AWzc8KkGYRg4uP_kuu0Za8GFxdFc=);
+  border-radius: 12px;
+  background-size: contain;
+
+
+}
+
+.info {
+  position: absolute;
+  height: 0;
+  color: goldenrod;
+  opacity: 0;
+  background-color: #0305047e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  width: 100%;
+  transition: .5s linear all;
+  border-radius: 12px;
+}
+
+.countiner .product:hover .info {
+  height: 100%;
+  top: 0;
+  right: 0;
+  /* color: gold; */
+  background-color: rgba(0, 0, 0, 0.685);
+  opacity: 1;
+}
+
+.countiner .product h3,
+h4,
+p {
+  font-size: 25px;
+  margin: 5px;
+
+}
