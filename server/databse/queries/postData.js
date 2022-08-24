@@ -1,11 +1,8 @@
 const connection = require('../config/connection');
 
-const addUser = (name, img, description, price, brandId) => {
-  const sql = {
-    text: 'INSERT INTO products (product_name,img,product_description,price,brand_id)',
-    values: [name, img, description, price, brandId],
-  };
-  return connection.query(sql);
-};
+const addProduct = (name, image, description, price, brandid) => connection.query(
+  'INSERT INTO products (product_name,img,product_description,price, brand_id) values($1, $2, $3 ,$4 ,$5) returning *',
+  [name, image, description, price, brandid],
+);
 
-module.exports = addUser;
+module.exports = addProduct;

@@ -1,17 +1,10 @@
 const { Pool } = require('pg');
 require('dotenv').config();
 
-
-// const { DB_URL_DEVELOPMENT } = process.env;
-
-// if (!DB_URL_DEVELOPMENT) {
-//   throw new Error('GO TO HELL');
-// }
-console.log(process.env.NODE_ENV);
 let ssl;
 let DATABASE_URL = '';
 if (process.env.NODE_ENV === 'production') {
-  DATABASE_URL = process.env. DATABASE_URL;
+  DATABASE_URL = process.env.DATABASE_URL;
   ssl = {
     rejectUnauthorized: false,
   };
@@ -21,7 +14,7 @@ if (process.env.NODE_ENV === 'production') {
 } else if (process.env.NODE_ENV === 'test') {
   DATABASE_URL = process.env.DB_TESTING;
   ssl = false;
-} else{
+} else {
   throw new Error('GO TO HELL!!!!!!');
 }
 const connection = new Pool({
