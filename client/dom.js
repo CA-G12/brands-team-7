@@ -90,10 +90,24 @@ function createCard(ele) {
   desc.textContent = ele.product_description;
   countiner.appendChild(product);
   product.appendChild(imgproduct);
+  const removeBtn=document.createElement('button')
+  removeBtn.textContent='Remove'
+  removeBtn.addEventListener('click',()=>{
+    product.remove()
+    fetch('/remove' ,{
+      method: 'POST', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(ele),
+    })
+  })
   info.appendChild(name);
   info.appendChild(price);
   info.appendChild(brand);
   info.appendChild(desc);
+  info.appendChild(removeBtn)
+
 }
 main=document.querySelector('main')
 main.addEventListener('click',()=>{
