@@ -15,17 +15,30 @@ function createOptions(array) {
 }
 function addproduct(e) {
   e.preventDefault();
-  if(!(pname.value && pimage.value && pdescription.value && pPrice.value && options.value)){
+  if (!(pname.value && pimage.value && pdescription.value && pPrice.value && options.value)) {
     return;
   }
-  let pInfo = {
+  const pInfo = {
     name: pname.value,
     image: pimage.value,
     description: pdescription.value,
     price: pPrice.value,
     brandid: options.value,
   };
-  console.log(pInfo);
+  fetch('/brands', {
+    method: 'POST', // or 'PUT'
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(pInfo),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
 }
 
 fetch('/brands')

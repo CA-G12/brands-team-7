@@ -1,13 +1,18 @@
 /* eslint-disable no-unused-vars */
-const { addUser } = require('../databse/queries');
+const { addProduct } = require('../databse/queries');
 
-const dataPost = (req, res) => {
+const addProductToDataBase = (req, res) => {
+  console.log(req.body);
+
   const {
-    name, img, description, price, brandId,
+    name, image, description, price, brandid,
   } = req.body;
-  addUser(name, img, description, price, brandId)
-    .then((data) => data.redirect('/'))
-    .catch(() => console.log('GO TO HELL'));
+  // console.log(111111);
+  addProduct(name, image, description, price, brandid).then((data) => res.status(201).json({
+    message: 'success',
+    data: data.rows[0],
+  }))
+    .catch((err) => console.log(err));
 };
 
-module.exports = dataPost;
+module.exports = addProductToDataBase;

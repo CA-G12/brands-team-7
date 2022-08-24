@@ -1,4 +1,4 @@
 const getBrands = require('./query');
-const addUser = require('./postData');
+const addProduct = require('./postData');
 
-module.exports = { getBrands, addUser };
+module.exports = { getBrands, addProduct };
