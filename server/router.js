@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 const router = require('express').Router();
-const { recieveData } = require('./controllers');
+const { recieveData, dataPost } = require('./controllers');
 
 router.get('/', recieveData);
 module.exports = router;
