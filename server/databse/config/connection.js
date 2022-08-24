@@ -21,13 +21,9 @@ if (process.env.NODE_ENV === 'production') {
 } else if (process.env.NODE_ENV === 'test') {
   DATABASE_URL = process.env.DB_TESTING;
   ssl = false;
-} else {
-const { HEROKU_POSTGRESQL_YELLOW_URL } = process.env;
-
-if (!HEROKU_POSTGRESQL_YELLOW_URL) {
-  throw new Error('GO TO HELL');
+} else{
+  throw new Error('GO TO HELL!!!!!!');
 }
-
 const connection = new Pool({
   connectionString: DATABASE_URL,
   ssl,
