@@ -5,6 +5,13 @@ const pimage = document.querySelector('.pimage');
 const pdescription = document.querySelector('.pdescription');
 const pPrice = document.querySelector('.pPrice');
 const countiner = document.querySelector('.countiner');
+const showForm=document.querySelector('.showForm');
+const form=document.querySelector('.form');
+
+showForm.addEventListener('click',()=>{
+  form.style.display='flex';
+})
+
 
 function createOptions(array) {
   array.forEach((element) => {
@@ -48,6 +55,8 @@ function addproduct(e) {
     .catch((error) => {
       console.error('Error:', error);
     });
+    form.style.display='none'
+
 }
 
 fetch('/brands')
@@ -65,20 +74,28 @@ function createProducts(arr) {
 
 function createCard(ele) {
   const product = document.createElement('div');
+  product.setAttribute('class','product')
+  const info = document.createElement('div');
+  info.setAttribute('class','info')
+  product.appendChild(info)
   const imgproduct = document.createElement('img');
   imgproduct.src = ele.img;
   const name = document.createElement('h3');
-  name.textContent = ele.product_name;
+  name.textContent ='Name : ' + ele.product_name;
   const price = document.createElement('h4');
   const brand = document.createElement('h4');
-  price.textContent = ele.price;
-  brand.textContent = ele.brand_name;
+  price.textContent ='Price : '+ ele.price;
+  brand.textContent = 'Brands : '+ ele.brand_name;
   const desc = document.createElement('p');
   desc.textContent = ele.product_description;
   countiner.appendChild(product);
   product.appendChild(imgproduct);
-  product.appendChild(name);
-  product.appendChild(price);
-  product.appendChild(brand);
-  product.appendChild(desc);
+  info.appendChild(name);
+  info.appendChild(price);
+  info.appendChild(brand);
+  info.appendChild(desc);
 }
+main=document.querySelector('main')
+main.addEventListener('click',()=>{
+  form.style.display='none'
+})
