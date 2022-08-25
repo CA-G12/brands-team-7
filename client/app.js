@@ -232,6 +232,13 @@ function addproduct(e) {
     .catch((error) => {
       console.error('Error:', error);
     });
+    pname.value ='';
+     pimage.value='';
+     pdescription.value ='';
+     pPrice.value ='';
+     options.value  ='';
+     payment.style.display = 'none';
+
 }
 
 fetch('/brands')
