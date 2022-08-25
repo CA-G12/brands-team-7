@@ -1,32 +1,150 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <title>Brands</title>
-</head>
-<body>
-  <header>
-    <h2>Brands</h2>
-    <button class="showForm">+</button>
-  </header>
-  <div class="form">
-  <form  method="POST">
-    <h3>Add Product</h3>
-    <input type="text" placeholder="product name" class="pname">
-    <input type="text" placeholder="product image" class="pimage">
-    <input type="text" placeholder="product description" class="pdescription">
-    <input type="text" placeholder="price" class="pPrice">
-    <select class="brands-options">
-    </select>
-    <button type="submit" class="btn">SUBMIT</button>
-  </form>
-</div>
-  <main class="countiner">
 
-  </main>
-  <script src="./dom.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Store</title>
+</head>
+
+<body  id="form">
+    <nav id="nav">
+        <div class="navTop">
+            <div class="navItem">
+                <p>BRANDS </p>
+            </div>
+            <div class="navItem">
+                <span class="limitedOffer">Limited Offer!</span>
+            </div>
+        </div>
+        <div class="navBottom">
+            <h3 class="menuItem">CHANEL</h3>
+            <h3 class="menuItem">VERSACE</h3>
+            <h3 class="menuItem">GUCCI</h3>
+        </div>
+    </nav>
+    <div class="slider">
+        <div class="sliderWrapper">
+            <div class="sliderItem">
+                <img src="./img/channel.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/Versace_logo.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+
+            </div>
+            <div class="sliderItem">
+                <img src="./img/logo-gucci.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="productsCards">
+    <!-- <div class="wrapper"> -->
+        <!-- <div class="product-img">
+          <img src="http://bit.ly/2tMBBTd" height="420" width="327">
+        </div> -->
+    <!-- <div class="product-info"> -->
+        <!-- <div class="product-text">
+          <h1>Harvest Vase</h1>
+          <p>Harvest Vases are a reinterpretation<br> of peeled fruits and vegetables as<br> functional objects. The surfaces<br> appear to be sliced and pulled aside,<br> allowing room for growth. </p>
+        </div> -->
+        <!-- <div class="product-price-btn">
+          <p class="description"><span>78</span>$</p>
+          <button type="button" class="btn">DELETE</button>
+        </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+    
+    <!-- </div> -->
+   </div>   
+    <div class="features">
+           <a href="#form"> <button class="productButton">ADD PRODUCT +</button> </a>
+        </div>
+        <form   method="POST">
+        <div class="payment">
+            <h1 class="payTitle">Product Information</h1>
+            <label>Product Name</label>
+            <input type="text" placeholder="" class="payInput" id="pname">
+            <label>Product Image</label>
+            <input type="text" placeholder="" class="payInput" id="pimage">
+            <label>Product Description</label>
+            <input type="text" placeholder="" class="payInput" id="pdescription">
+            <label>Price</label>
+            <input type="text" placeholder="" class="payInput" id="pPrice">
+            <label>Brand Name</label>
+            <!-- <input type="text" placeholder="" class="payInput"> -->
+            <select class="payInput" id="brands-options">
+                <!-- <option>CHANEL</option>
+                <option>VERSACE</option>
+                <option>GUCCI</option> -->
+            </select>
+            <button class="payButton" type="submit">Add</button>
+            <span class="close">X</span>
+        </div>
+    </div>
+   </form> 
+    <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">About Us</h1>
+                <ul class="fList">
+                    <li class="fListItem">Company</li>
+                    <li class="fListItem">Contact</li>
+                    <li class="fListItem">Careers</li>
+                    <li class="fListItem">Affiliates</li>
+                    <li class="fListItem">Stores</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Useful Links</h1>
+                <ul class="fList">
+                    <li class="fListItem">Support</li>
+                    <li class="fListItem">Refund</li>
+                    <li class="fListItem">FAQ</li>
+                    <li class="fListItem">Feedback</li>
+                    <li class="fListItem">Stories</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Products</h1>
+                <ul class="fList">
+                    <li class="fListItem">Air Force</li>
+                    <li class="fListItem">Air Jordan</li>
+                    <li class="fListItem">Blazer</li>
+                    <li class="fListItem">Crater</li>
+                    <li class="fListItem">Hippie</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+                <div class="fMail">
+                    <input type="text" placeholder="your@email.com" class="fInput">
+                    <button class="fButton">Join!</button>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Follow Us</h1>
+                <div class="fIcons">
+                    <img src="./img/facebook.png" alt="" class="fIcon">
+                    <img src="./img/twitter.png" alt="" class="fIcon">
+                    <img src="./img/instagram.png" alt="" class="fIcon">
+                    <img src="./img/whatsapp.png" alt="" class="fIcon">
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <span class="copyright">@Lama Dev. All rights reserved. 2022.</span>
+            </div>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
 </body>
+
 </html>
